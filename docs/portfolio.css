@@ -23,9 +23,11 @@ li {
   list-style: none;
 }
 
-.header {
+.navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+
+  flex-direction: row;
   max-width: 800px;
   margin: 0 auto;
   /* background-color: rgba(28, 28, 28, 0.151); */
@@ -35,6 +37,15 @@ li {
   font-size: 0.9rem;
   line-height: 1.6;
   color: #d8d8d8;
+  align-items: center;
+}
+
+.nav-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  text-align: center;
   align-items: center;
 }
 
@@ -73,7 +84,9 @@ span {
   color: black;
   text-align: center;
   font-size: 1rem;
-  font-weight: 900;
+  font-weight: 1000;
+  margin-left: 0.2rem;
+  line-height: 1rem;
 }
 
 .experience-container {
@@ -122,6 +135,22 @@ span {
   height: 1em;
   justify-content: center;
   color: rgb(18, 18, 65);
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 1rem;
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 0;
+}
+.foot {
+  margin: 1rem;
+  display: flex;
+  background-color: rgba(28, 28, 28, 0.151);
 }
 
 button {
@@ -217,7 +246,7 @@ h5 {
   animation-delay: 2.8s;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .main-section {
     display: flex;
     flex-direction: column;
@@ -236,5 +265,18 @@ h5 {
   h2,
   p {
     text-align: center;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.show {
+    display: block;
+  }
+}
+
+@media (min-width: 700px) {
+  .menu-toggles {
+    display: none;
   }
 }
